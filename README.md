@@ -69,7 +69,7 @@ to be removed and not masked) nor too high to miss many detections of real sourc
 
 A typical Linux command line, using a dilation=5 pixels with mfactor=4x and a minimum isoarea=5000 pixels to mask extended objects, looks like:
 
-    denoise_NIRCam.py -i 5000 -k -d 5 -m 4 -p -v image.fits 
+    denoise_NIRCam.py -i 5000 -k -d 5 -m 4 -p -v jw_cal.fits 
     
 # Result:
 
