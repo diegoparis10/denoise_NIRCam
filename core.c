@@ -107,6 +107,8 @@ int dilate(char *flag, char *msk, short dil, short factor, unsigned short mod, u
       }       
     }
     while(TRUE){
+      int pct = ((float) w / iter) * 100;
+      printf("Progress:   %2d %%\e[u", pct);    
       for (j = K / 2; j < naxes[1] - K / 2; ++j) { 
 	for (i = K / 2; i < naxes[0] - K / 2; ++i){
 	  sum = 0; 
