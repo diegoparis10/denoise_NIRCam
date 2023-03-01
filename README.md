@@ -75,7 +75,7 @@ A typical Linux command line, using a dilation=5 pixels with mfactor=4x and a mi
 
 Here is a typical NIRCam image before (left) and after (right) the 1/f denoising:
 
-<img src="https://user-images.githubusercontent.com/68115391/214032963-2488fc6b-655f-4475-a592-4f8992ff463f.png" width="750" />
+<img src="https://user-images.githubusercontent.com/68115391/222123579-fe481925-48cf-4468-9fe5-c6e16672ccb4.jpeg" width="750" />
 
 
 
