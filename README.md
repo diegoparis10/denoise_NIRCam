@@ -81,7 +81,7 @@ Here is a typical NIRCam image before (left) and after (right) the 1/f denoising
 
 # Acknowledging denoise_NIRCam:
 
-If you use the code for publishing purposes, please add the following papers among citations:
+If you use the code for publishing purposes, add the following papers among citations:
 
 - Paris, D., Merlin, E., Fontana A. et al. 2023: arXiv e-prints, arXiv:2301.02179. [https://arxiv.org/abs/2301.02179]
 
