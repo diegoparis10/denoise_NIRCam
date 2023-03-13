@@ -99,10 +99,15 @@ int dilate(char *flag, char *msk, short dil, short factor, unsigned short mod, u
   if (mod==9){
     if (v==1){
       printf("Convolving edges with kernel:\n");  
+      for(int i = 0; i < 9; i++) {
+	 for(int j = 0; j < 9; j++) {
+	     printf("%d ", kernel9[i][j]);
+	 }
+	 printf("\n");
+       }      	    
     }
     while(TRUE){
       int pct = ((float) w / iter) * 100;
-      printf("Progress:   %2d %%\e[u", pct);    
       for (j = K / 2; j < naxes[1] - K / 2; ++j) { 
 	for (i = K / 2; i < naxes[0] - K / 2; ++i){
 	  sum = 0; 
@@ -122,7 +127,13 @@ int dilate(char *flag, char *msk, short dil, short factor, unsigned short mod, u
     }
   } else {
     if (v==1){
-      printf("Convolving edges with kernel:\n");      
+      printf("Convolving edges with kernel:\n"); 
+      for(int i = 0; i < 3; i++) {
+	for(int j = 0; j < 3; j++) {
+	  printf("%d ", kernel3[i][j]);
+	}
+	printf("\n");
+      }    	    
     }
     while(TRUE){
       for (j = K / 2; j < naxes[1] - K / 2; ++j) { 
