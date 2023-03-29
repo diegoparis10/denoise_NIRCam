@@ -1,0 +1,41 @@
+
+########################################################### INSTRUCTIONS ##########################################################
+                                                                                                                                    |
+I) Hardware: the minimal configuration used to test the package is a 4-cores (4 threads) Intel i5-3470 (3.20 GHz) monoprocessor.    |
+                                                                                                                                    |
+II) denoise_NIRCam.py is written in Python3/C and runs on Linux Platforms. It has been tested on Ubuntu OS (Ubuntu 20.04+)          |
+using the python3 interpreter (3.8.10+) and needs the following dependencies:                                                       |
+    libcfitsio                                                                                                                      |
+    python3-astropy                                                                                                                 |
+    SExtractor (source-extractor)                                                                                                   |
+To install dependencies on Ubuntu using apt:                                                                                        |
+    sudo apt install libcfitsio*                                                                                                    |
+    sudo apt install python3-astropy*                                                                                               |
+Be sure SExtractor (Bertin et al. 2006) is installed in your local machine and the PATH environment variable is exported in order   | 
+to recognize                                                                                                                        |
+'sex' (or 'source-extractor') among system executables. E.g. append this line in your .bashrc located in your home folder:          |
+    export PATH=path_to_sex:$PATH                                                                                                   |
+being path_to_sex the folder where the executable 'sex' (or 'source_extractor') is located.                                         |
+You can get SExtractor from github here: https://github.com/astromatic/sextractor                                                   |
+                                                                                                                                    |
+III) To clone the project on your client, type:                                                                                     |
+    git clone thttps://github.com/diegoparis10/denoise_NIRCam.git                                                                   |
+in the desired location of your workspace, let say "path_to_denoise_NIRCam"                                                         |
+                                                                                                                                    |
+IV) Enter the cloned directory "path_to_denoise_NIRCam" and type:                                                                   |
+    chmod a+x denoise_NIRCam.py                                                                                                     |
+This makes denoise_NIRCAM.py executable.                                                                                            |
+                                                                                                                                    |
+V) Compile the C source code as shared library, passing the include folder where the cfitsio header files are placed                |
+and the cfitsio library, e.g.:                                                                                                      |
+   gcc -fPIC -shared -o core.so core.c -I/usr/include/ -lcfitsio                                                                    |
+                                                                                                                                    |
+VI) Update your enviroment PATH to make denoise_NIRCAM.py recognizable as a command line executable. To make the changes effective  |
+edit your $HOME/.bashrc (or similar) and append this line:                                                                          |
+    export PATH=path_to_denoise_NIRCam:$PATH                                                                                        |
+                                                                                                                                    |
+VII) To test the installation, type:                                                                                                |
+    denoise_NIRCam.py -h                                                                                                            |
+If everything has gone ok, the full help will be shown. Enjoy!                                                                      |
+                                                                                                                                    |
+####################################################################################################################################
