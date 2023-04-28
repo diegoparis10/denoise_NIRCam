@@ -82,7 +82,7 @@ If you use the code for publishing purposes, add the following papers among cita
 
 - Paris, D., Merlin, E., Fontana A. et al. 2023: arXiv e-prints, arXiv:2301.02179. [https://arxiv.org/abs/2301.02179]
 
-- Merlin, E., Bonchi, A., Paris, D. et al. 2022, A&A, 938,827 L14, doi: http://doi.org/10.3847/2041-8213/ac8f93
+- Merlin, E., Bonchi, A., Paris, D. et al. 2022, A&A, 938,827 [http://doi.org/10.3847/2041-8213/ac8f93]
 
 - Bertin, E., & Arnouts, S. 1996, A&AS, 117, 393 [https://ui.adsabs.harvard.edu/abs/1996A%26AS..117..393B/abstract]
 
