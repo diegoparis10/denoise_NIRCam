@@ -3,24 +3,23 @@
                                                                                                                                     |
 I) Hardware: the minimal configuration used to test the package is a 4-cores (4 threads) Intel i5-3470 (3.20 GHz) monoprocessor.    |
                                                                                                                                     |
-II) denoise_NIRCam.py is written in Python3/C and runs on Linux Platforms. It has been tested on Ubuntu OS (Ubuntu 20.04+)          |
+II) denoise_NIRCam.py is written in Python3 and C and runs on Linux Platforms. It has been tested on Ubuntu OS (Ubuntu 20.04+)      |
 using the python3 interpreter (3.8.10+) and needs the following dependencies:                                                       |
     libcfitsio                                                                                                                      |
     python3-astropy                                                                                                                 |
     SExtractor (source-extractor)                                                                                                   |
-To install dependencies on Ubuntu using apt:                                                                                        |
+To install the dependencies on Ubuntu using apt, type:                                                                              |
     sudo apt install libcfitsio*                                                                                                    |
     sudo apt install python3-astropy*                                                                                               |
 Be sure SExtractor (Bertin et al. 2006) is installed in your local machine and the PATH environment variable is exported in order   | 
-to recognize                                                                                                                        |
-'sex' (or 'source-extractor') among system executables. E.g. append this line in your .bashrc located in your home folder:          |
+to find 'sex' (or 'source-extractor') among system executables. E.g. append this line in your .bashrc located in your home folder:  |
     export PATH=path_to_sex:$PATH                                                                                                   |
 being path_to_sex the folder where the executable 'sex' (or 'source_extractor') is located.                                         |
 You can get SExtractor from github here: https://github.com/astromatic/sextractor                                                   |
                                                                                                                                     |
 III) To clone the project on your machine, type:                                                                                    |
     git clone https://github.com/diegoparis10/denoise_NIRCam.git                                                                    |
-in the desired location of your workspace, let say "path_to_denoise_NIRCam"                                                         |
+in the desired directory, let say "path_to_denoise_NIRCam"                                                                          |
                                                                                                                                     |
 IV) Enter the cloned directory "path_to_denoise_NIRCam" and type:                                                                   |
     chmod a+x denoise_NIRCam.py                                                                                                     |
