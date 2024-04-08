@@ -18,8 +18,8 @@ to recognize                                                 
 being path_to_sex the folder where the executable 'sex' (or 'source_extractor') is located.                                         |
 You can get SExtractor from github here: https://github.com/astromatic/sextractor                                                   |
                                                                                                                                     |
-III) To clone the project on your client, type:                                                                                     |
-    git clone thttps://github.com/diegoparis10/denoise_NIRCam.git                                                                   |
+III) To clone the project on your machine, type:                                                                                     |
+    git clone https://github.com/diegoparis10/denoise_NIRCam.git                                                                   |
 in the desired location of your workspace, let say "path_to_denoise_NIRCam"                                                         |
                                                                                                                                     |
 IV) Enter the cloned directory "path_to_denoise_NIRCam" and type:                                                                   |
