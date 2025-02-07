@@ -8,15 +8,16 @@ Description:
 
 *denoise_NIRCam* has been developed to remove stripes from each image row/column subtracting its median value, obtained
 masking objects and DQ-flagged pixels . The object masks are obtained running SExtractor (Bertin & Arnouts 1996) and dilating 
-the resulting segmentation image, applying a careful procedure to dilate segmentation depending on ISOAREA of objects:
--  a 3x3 convolution kernel and the desired dilation d in pixels is applied for objects with ISOAREA lower than a threshold
--  a 9x9 convolution kernel and a dilation of (m x d) pixels is applied for objects with ISOAREA greater than the threshold, 
+the resulting segmentation image. The procedure to dilate the segmentation depends on the ISOAREA of the objects and uses:
+-  a 3x3 convolution kernel and the desired dilation d in pixels for objects with ISOAREA lower than a threshold
+-  a 9x9 convolution kernel and a dilation of (m x d) pixels for objects with ISOAREA larger than the threshold, 
 being m a desired multiplicative factor to apply to the desired dilation d.
 
-The denoising is performed over the entire columns and can be executed separately for each amplificator row or over 
+The correction is applied on the entire columns and can be applied separately on each amplificator row or on 
 the entire rows. The entire rows modality is recommended in presence of very extended objects.
 
-Processing parameters are passed as command line options and the defaults are expressed inside brackets. 
+Processing parameters are given as command line options. The complete list of option and help are shown below, and defaults 
+are given inside brackets. 
 Boolean options do not need arguments, calling or not calling a boolean option means 'True' or 'False' 
 respectively. The defaults of boolean options are expressed in curly braces.
 
@@ -46,20 +47,20 @@ Here is the help message with the complete list of the options:
                           The minimum area to mask extended objects [4000]
     -k, --keepall         Keep all flags in DQ layer? If False,
                           only pixels that are marked as 'DO NOT USE' are
-                          discarded [False]
+                          discarded {False}
     -m MFACTOR, --mfactor=MFACTOR
                           The factor used to multiply the dilation of extended
                           object mask [4]
     -p, --purge           Purge temporary intermediate files? {False}
     -s DETECT_SIGMA, --detect_sigma=DETECT_SIGMA
                           The sigma used to detect sources [4]
-    -v, --verbose         Verbose output [False]
+    -v, --verbose         Verbose output {False}
     -V, --version         Print program version number, then quit.
 
 # Tips:
 
-The use of the '-k' option is highly recommended, in order to discard outliers in the median estimates as much as possible. 
-The sigma for detection should not be chosen too low, to avoid spurious detections (e.g. parts of stripes or even entire stripes, which have 
+The use of the '-k' option is highly recommended, in order to better discard outliers in estimating the median values. 
+Detection sigma should not be chosen too low, to avoid spurious detections (e.g. parts of stripes or even entire stripes, which have 
 to be removed and not masked) nor too high to miss many detections of real sources. 
 
 # Run:
