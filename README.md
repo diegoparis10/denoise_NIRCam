@@ -4,7 +4,7 @@ Package for denoising NIRCam calibrated images
 
 Description: 
 
-1/f noise introduces random vertical and horizontal stripes inside the JWST NIRCam images. 
+1/f noise introduces random stripes inside the JWST NIRCam images. 
 
 *denoise_NIRCam* has been developed to remove stripes from each image row/column subtracting its median value, obtained
 masking objects and DQ-flagged pixels . The object masks are obtained running SExtractor (Bertin & Arnouts 1996) and dilating 
